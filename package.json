@@ -1,0 +1,16 @@
+{
+  "name": "twitter-scripts",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Aguirre Gonzalo Adolfo <gonza.a.aguirre@gmail.com> (https://github.com/gonza7aav)",
+  "private": true,
+  "scripts": {
+    "oauth": "node src/oauth.js",
+    "dislike": "node src/dislike.js"
+  },
+  "dependencies": {
+    "dotenv": "14.2.0",
+    "got": "<12.0.0",
+    "oauth-1.0a": "2.2.6"
+  }
+}
