@@ -1,16 +1,64 @@
 {
   "name": "twitter-scripts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "author": "Aguirre Gonzalo Adolfo <gonza.a.aguirre@gmail.com> (https://github.com/gonza7aav)",
   "private": true,
+  "type": "module",
   "scripts": {
+    "check-format": "prettier --check .",
+    "format": "prettier --write .",
+    "lint": "eslint --color .",
     "oauth": "node src/oauth.js",
-    "dislike": "node src/dislike.js"
+    "dislike": "node src/dislike.js",
+    "tweet": "node src/tweet.js"
   },
   "dependencies": {
     "dotenv": "14.2.0",
     "got": "<12.0.0",
     "oauth-1.0a": "2.2.6"
+  },
+  "devDependencies": {
+    "eslint": "8.8.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.25.4",
+    "prettier": "2.5.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "es2021": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2022,
+      "sourceType": "module"
+    },
+    "extends": [
+      "airbnb-base"
+    ],
+    "rules": {
+      "comma-dangle": [
+        "error",
+        "only-multiline"
+      ],
+      "implicit-arrow-linebreak": "off",
+      "import/extensions": [
+        "error",
+        "ignorePackages"
+      ],
+      "no-console": "off"
+    }
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "endOfLine": "lf",
+    "printWidth": 80,
+    "quoteProps": "as-needed",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
   }
 }
