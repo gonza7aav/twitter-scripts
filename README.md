@@ -37,3 +37,17 @@ This will dislike your last 50 (user rate limit per 15-minute window) tweets. Th
 ```bash
 npm run dislike
 ```
+
+#### Docker
+
+You can run a _Docker_ container with a cronjob to dislike tweets every 20 minutes. For more information see [Dockerfile](Dockerfile) and [cronfile](src/cronfile).
+
+```bash
+docker run --detach \
+  --env CONSUMER_KEY=XXX \
+  --env CONSUMER_SECRET=XXX \
+  --env USER_ID=XXX \
+  gonza7aav/twitter-scripts-dislike:0.2.0
+```
+
+Remember, to dislike tweets you need the `.oauth` file. So you could enter the container and run the oauth script to get the credentials, or if you already have one, copy it to the `/app` folder.
