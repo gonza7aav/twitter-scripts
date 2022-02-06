@@ -40,7 +40,7 @@ npm run dislike
 
 #### Docker
 
-You can run a _Docker_ container with a cronjob to dislike tweets every 20 minutes. For more information see [Dockerfile](Dockerfile) and [cronfile](src/cronfile).
+You can run a _Docker_ container with a cronjob to dislike tweets every 20 minutes [^1]. For more information see [Dockerfile](Dockerfile) and [cronfile](src/cronfile).
 
 ```bash
 docker run --detach \
@@ -51,3 +51,5 @@ docker run --detach \
 ```
 
 Remember, to dislike tweets you need the `.oauth` file. So you could enter the container and run the oauth script to get the credentials, or if you already have one, copy it to the `/app` folder.
+
+[^1]: Change `RATE_LIMIT` according to your app's rate limit.
